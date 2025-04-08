@@ -1,7 +1,11 @@
 const express = require ('express');
+const mongoDB = require('./config/db')
+
 const app = express();
 const PORT = 3000;
 
+// CONNECTION A LA BASE DE DONNE 
+mongoDB();
 
 // MIDELWARE POUR PARSER LES REQUETTE JSON 
 app.use(express.json());
