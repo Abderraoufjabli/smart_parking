@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 
 const mongoDB = async ()=>{
     try {
-        await mongoose.connect('mongodb://localhost:27017/smart_parking',{useNewUrlParser: true,
-            useUnifiedTopology: true,});
-            console.log('✅ MongoDB connected');
+        await mongoose.connect('mongodb://localhost:27017/smart_parking');
+            console.log('MongoDB connected');
 
     }catch(err){ 
-    console.error('❌ MongoDB connection failed:', err.message);
+    console.error('MongoDB connection failed:', err.message);
     process.exit(1);
     }
 }
