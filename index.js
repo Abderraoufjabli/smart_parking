@@ -1,14 +1,14 @@
-const express = require ('express');
-const mongoDB = require('./config/db')
+const express = require('express')
+const mongoose = require('./config/db');
+const mongoDB = require('./config/db');
 
-const app = express();
+const app=express()
+
 const PORT = 3000;
 
 // CONNECTION A LA BASE DE DONNE 
 mongoDB();
 
-// MIDELWARE POUR PARSER LES REQUETTE JSON 
-app.use(express.json());
 
 
 // ROUTE DE TEST 
